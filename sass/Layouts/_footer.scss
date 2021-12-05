@@ -1,0 +1,48 @@
+footer{
+    @include styleText($color-gray-0,$fs-1,$fw-0);
+    .footer__top{
+        width: 90%;
+        margin: $mg-4 auto;
+        ul{
+            height: 110px;
+            .nav-item{
+                flex-basis: 25%;
+                .nav-link{
+                    color: $color-blue-0;
+                    padding: 0;
+                    &.bold{
+                        font-weight: $fw-2;
+                    }
+                }
+            }
+        }
+        .btn-group{
+            display: block;
+            .button--dropup{
+                min-width: 160px;
+                box-shadow: none;
+                i{
+                    padding: 0 $pd-2;
+
+                }
+                &::after{
+                    margin-left: 30%;
+                }
+            }
+            .dropdown-menu{
+                font-size: $fs-1;
+            }
+        }
+    }
+    .footer__bottom{
+        width: 90%;
+        margin: $mg-3 - 2 auto;
+        img{
+            width: 110px;
+            margin-right: $mg-0 + 5;
+        }       
+        .nav-link{
+            @include styleText($color-blue-0,$fs-1,$fw-0);
+        }
+    }
+}

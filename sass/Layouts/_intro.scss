@@ -1,0 +1,42 @@
+.intro{
+    background: linear-gradient(-45deg,$color-red-0,$color-purple);
+    padding:$pd-3 ;
+    .intro__content{
+        width: 78%;
+        margin: 0 auto;
+        .intro__items{
+            display: flex;
+            align-items: center;
+            // justify-content: space-around;
+            
+        }
+        .intro__icon{
+            font-size:$fs-6;
+            color: $color-white-0;
+            margin-right:$mg-1;
+        }
+        .intro__details{
+            p{
+                margin-bottom: 0;
+                &:first-child{
+                    @include styleText($color-white-0,$fs-3 - 1,$fw-2 );
+                }
+                &:last-child{
+                    @include styleText($color-white-0,$fs-0,$fw-0 );
+                }
+            }
+            
+        }
+    }
+
+    @include responsive("extra-large"){
+        .intro__content{
+            .intro__icon{
+                display: none;
+            }
+        }
+    }
+    @include responsive("medium"){       
+            display: none;
+    }
+}

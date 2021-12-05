@@ -1,0 +1,56 @@
+.darkMode {
+    .myNavBar {
+        background-color: $color-dark-4;
+        .myNavBar__left {
+            .navbar-brand {
+                .logo-black {
+                    display: none;
+                }
+                .logo-white {
+                    display: inline-block;
+                }
+            }
+            .myNavBar__categories {
+                color: $color-dark-3;
+                i {
+                    color: $color-dark-5;
+                }
+            }
+            .myNavBar__form-search {
+                @include styleFormSearch($color-dark-0, $color-dark-6, $color-dark-2, $color-dark-5);
+            }
+        }
+        .myNavBar__right {
+            .navbar-nav {
+                .nav-item {
+                    border:1px solid transparent;
+                    .nav-link {
+                        color: $color-dark-5;
+                    }
+                    &:hover {
+                        background-color: $color-dark-0;
+                        border:1px solid $color-dark-2;
+                    }
+                    .overlay{
+                        background-color: $color-dark-4;
+                        border: 1px solid $color-dark-2;
+                        &::before{
+                            background-color: $color-dark-4;
+                            border-top: 1px solid $color-dark-2;
+                        border-left: 1px solid $color-dark-2;
+                        }
+                    }
+                }
+                .myNavBar__buttons{
+                    &:hover{
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+        .navbar-toggler{
+            background-color: $color-dark-5;
+        }
+    }
+}
